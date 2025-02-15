@@ -21,10 +21,10 @@ export default function Duration(props: DurationProps) {
   };
 
   const handleBlur = () => {
-    if (duration < 3) {
-      setDuration(3);
-    } else if (duration > 12) {
-      setDuration(12);
+    if (duration < DURATION_RANGE.min) {
+      setDuration(DURATION_RANGE.min);
+    } else if (duration > DURATION_RANGE.max) {
+      setDuration(DURATION_RANGE.max);
     }
   };
 
